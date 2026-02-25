@@ -8,7 +8,7 @@ import (
 type response struct {
 	Message string      `json:"message"`
 	Data    interface{} `json:"data,omitempty"`
-	Error   string      `json:"error.omitempty"`
+	Error   string      `json:"error,omitempty"`
 }
 
 func ResponseJsonWriter(w http.ResponseWriter, data interface{}, statusCode int, message string, errorMessage string) {
