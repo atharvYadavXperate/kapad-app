@@ -1,6 +1,6 @@
 module github.com/atharvYadavXperate/kapad-app
 
-go 1.25.5
+go 1.22
 
 require (
 	cloud.google.com/go/firestore v1.21.0
