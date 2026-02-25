@@ -4,14 +4,13 @@ import (
 	"context"
 
 	"cloud.google.com/go/firestore"
-	custiomeerror "github.com/atharvYadavXperate/kapad-app/domain/errors"
 )
 
 func NewDatabase(ctx context.Context, projectId string) (*Database, error) {
 	once.Do(func() {
 		c, err := firestore.NewClient(ctx, projectId)
 		if err != nil {
-			initErr = custiomeerror.ErrDatabaseConnectionFailed
+			initErr = err
 			return
 		}
 		instance = &Database{
