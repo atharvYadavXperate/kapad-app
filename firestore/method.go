@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"cloud.google.com/go/firestore"
-	customerror "github.com/atharvYadavXperate/newCicd/kapad-app/domain/errors"
-	"github.com/atharvYadavXperate/newCicd/kapad-app/domain/helpers"
+	customerror "github.com/atharvYadavXperate/kapad-app/domain/errors"
+	"github.com/atharvYadavXperate/kapad-app/domain/helpers"
 )
 
 func (db *Database) GetById(ctx context.Context, collection, docID string, result interface{}) error {

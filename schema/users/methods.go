@@ -4,8 +4,8 @@ import (
 	"io"
 	"time"
 
-	"github.com/atharvYadavXperate/newCicd/kapad-app/domain"
-	"github.com/atharvYadavXperate/newCicd/kapad-app/domain/helpers"
+	"github.com/atharvYadavXperate/kapad-app/domain"
+	"github.com/atharvYadavXperate/kapad-app/domain/helpers"
 )
 
 func (u *UserSchema) ParseData(body io.Reader) error {

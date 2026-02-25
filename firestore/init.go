@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"cloud.google.com/go/firestore"
-	custiomeerror "github.com/atharvYadavXperate/newCicd/kapad-app/domain/errors"
+	custiomeerror "github.com/atharvYadavXperate/kapad-app/domain/errors"
 )
 
 func NewDatabase(ctx context.Context, projectId string) (*Database, error) {

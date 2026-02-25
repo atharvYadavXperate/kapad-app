@@ -4,7 +4,7 @@ import (
 	"context"
 	"os"
 
-	db "github.com/atharvYadavXperate/newCicd/kapad-app/firestore"
+	db "github.com/atharvYadavXperate/kapad-app/firestore"
 )
 
 func (a *App) Init() {

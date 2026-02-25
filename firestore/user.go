@@ -3,8 +3,8 @@ package db
 import (
 	"context"
 
-	customerror "github.com/atharvYadavXperate/newCicd/kapad-app/domain/errors"
-	"github.com/atharvYadavXperate/newCicd/kapad-app/schema/users"
+	customerror "github.com/atharvYadavXperate/kapad-app/domain/errors"
+	"github.com/atharvYadavXperate/kapad-app/schema/users"
 )
 
 var (
