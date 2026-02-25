@@ -25,8 +25,8 @@ func NewDatabase(ctx context.Context, projectId string) (*Database, error) {
 }
 
 func (db *Database) Close() error {
-	if db.Close() != nil {
-		return db.Client.Close()
+	if db == nil || db.Close() != nil {
+		return nil
 	}
-	return nil
+	return db.Client.Close()
 }

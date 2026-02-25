@@ -23,3 +23,7 @@ func (a *App) InitDatabase() error {
 	a.Database = database
 	return nil
 }
+
+func (a *App) CloseAll() {
+	a.Database.Close()
+}
