@@ -2,6 +2,7 @@ package db
 
 import (
 	"context"
+	"log"
 
 	"cloud.google.com/go/firestore"
 )
@@ -9,6 +10,7 @@ import (
 func NewDatabase(ctx context.Context, projectId string) (*Database, error) {
 	once.Do(func() {
 		c, err := firestore.NewClient(ctx, projectId)
+		log.Println("New Database Connection")
 		if err != nil {
 			initErr = err
 			return
@@ -21,11 +23,4 @@ func NewDatabase(ctx context.Context, projectId string) (*Database, error) {
 		return nil, initErr
 	}
 	return instance, nil
-}
-
-func (db *Database) Close() error {
-	if db == nil || db.Close() != nil {
-		return nil
-	}
-	return db.Client.Close()
 }
