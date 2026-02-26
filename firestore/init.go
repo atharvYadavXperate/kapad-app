@@ -10,7 +10,7 @@ import (
 func NewDatabase(ctx context.Context, projectId string) (*Database, error) {
 	once.Do(func() {
 		c, err := firestore.NewClient(ctx, projectId)
-		log.Println("New Database Connection")
+		log.Println("New Database is established")
 		if err != nil {
 			initErr = err
 			return
